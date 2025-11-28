@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution {
+class ValidAnagrams {
     public boolean isAnagram(String s, String t) {
         HashMap<Character, Integer>map = new HashMap<>();
         for(char ch: s.toCharArray()){
