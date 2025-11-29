@@ -25,6 +25,17 @@ public class ValidSudoku {
             }
         }
 
-        int subgridStartRow = 
+        int subgridStartRow = (row/3)*3;
+        int subgridStartCol = (col/3)*3;
+
+        for(int i = subgridStartRow; i<subgridStartRow+3; i++) {
+            for(int j = subgridStartCol; j<subgridStartCol+3; j++) {
+                if((i!=row && j!=col) && sudoku[i][j] == digit) {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }
